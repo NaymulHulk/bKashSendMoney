@@ -1,82 +1,20 @@
 <html>
 <head>
-    <title>bKash Send Money</title>
+    <title>Send Money</title>
+    <meta class="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<!--
-<script>
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-            return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.com/en_US/messenger.Extensions.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'Messenger'));
-    window.extAsyncInit = () => {
-        // TODO: How to parse env file from here?
-        MessengerExtensions.getSupportedFeatures(function success(result) {
-            let features = result.supported_features;
-            if (features.includes("context")) {
-                MessengerExtensions.getContext('<APP_ID>',
-                    function success(thread_context) {
-                        // success
-                        document.getElementById("psid").value = thread_context.psid;
-                    },
-                    function error(err) {
-                        // error
-                        console.log(err);
-                    }
-                );
-            }
-        }, function error(err) {
-            // error retrieving supported features
-            console.log(err);
-        });
-        document.getElementById('submitButton').addEventListener('click', () => {
-            MessengerExtensions.requestCloseBrowser(function success() {
-                console.log("Webview closing");
-            }, function error(err) {
-                console.log(err);
-            });
-        });
-    };
-</script>
--->
-<script>
-(function(d, s, id){
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'Messenger'));
 
-MessengerExtensions.requestCloseBrowser(function success() {
-  // webview closed
-}, function error(err) {
-  // an error occurred
-});
-
-
-
-window.extAsyncInit = function() {
-  // the Messenger Extensions JS SDK is done loading 
-};
-
-</script>
 
     <center><h2>bKash Send Money</h2>
 
-<form action="/action_page.php">
+<form action="display.html"  method="get">
   Sender's Number:<br>
-  <input type="text" name="Sender's Number" value=sender>
+  <input type="text" name="Sender's Number" value="">
   <br><br>
-    <button onclick="window.location.href = 'https://w3docs.com';">Proceed to receiver's number</button>
-  
+  <button onclick="window.location.href = 'https://w3docs.com';">Proceed to receiver's number</button>
+
 </form> 
 
 </center>
