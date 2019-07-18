@@ -1,5 +1,14 @@
 
+// to detect enter button
+var input = document.getElementById("senderNumber");
+input.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("buttonOne").click();
+    }
+});
 
+// to detect for valid input
 function validate() {
 
 
@@ -11,7 +20,7 @@ function validate() {
 
         console.log("not validated.");
 
-        alert("Sender Number cannot be decimal");
+        alert("Sender Number cannot be decimal or void.");
 
     } else if (validateInRange(senderNumber)) {
 
@@ -21,13 +30,17 @@ function validate() {
     }
 
     else {
+
         console.log("validated.");
+
         window.location = 'https://naymulhulk.github.io/bKashSendMoney2/'
     }
 
 }
 
+// to detect valid number
 function validateInRange(num) {
+
     if ((num > 1999999999) || (num < 1300000000) || ((num >= 1400000000) && (num <= 1499999999))) {
         return true;
     }
