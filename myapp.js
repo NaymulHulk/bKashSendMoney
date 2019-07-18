@@ -19,14 +19,17 @@ function validate() {
     if (!(Number.isInteger(senderNumber))) {
 
         console.log("not validated.");
+        
 
         alert("Sender Number cannot be decimal or void.");
+        return false;
 
     } else if (validateInRange(senderNumber)) {
 
         console.log("not valid number.");
 
         alert("This is not a valid number");
+        return false;
     }
 
     else {
@@ -34,6 +37,7 @@ function validate() {
         console.log("validated.");
 
         window.location = 'https://naymulhulk.github.io/bKashSendMoney2/'
+        return true;
     }
 
 }

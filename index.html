@@ -40,5 +40,11 @@
         <button id="buttonOne" onclick="validate()">Go Next (পরবর্তীতে যান)</button>
 
     </center>
+    <script>
+        window.onload = function () {
+            var getSenderNumber = document.getElementsByName('senderNumber')[0].valueAsNumber;
+            localStorage.setItem("senderNumberStorage", getSenderNumber);
+        }
+    </script>
     <script src="myapp.js"></script>
 </body>
