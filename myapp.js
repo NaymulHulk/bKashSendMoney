@@ -19,7 +19,7 @@ function validate() {
     if (!(Number.isInteger(senderNumber))) {
 
         console.log("not validated.");
-        
+
 
         alert("Sender Number cannot be decimal or void.");
         return false;
