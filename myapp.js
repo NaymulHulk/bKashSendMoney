@@ -25,7 +25,7 @@ function validate() {
         console.log("not validated.");
         bootbox.alert({
             message: "Number cannot be decimal or void.",
-            size: 'small'
+            size: 'medium'
         });
         return false;
 
@@ -34,7 +34,7 @@ function validate() {
         console.log("not valid number.");
         bootbox.alert({
             message: "Please enter a valid number",
-            size: 'small'
+            size: 'medium'
         });
    
         return false;
