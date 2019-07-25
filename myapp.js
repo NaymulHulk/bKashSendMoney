@@ -1,12 +1,16 @@
 
 // to detect enter button
-var input = document.getElementById("senderNumber");
-input.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        document.getElementById("buttonOne").click();
-    }
-});
+{/* <script> 
+		$("#pass").keypress(function(event) { 
+			if (event.keyCode === 13) { 
+				$("#GFG_Button").click(); 
+			} 
+		}); 
+
+		$("#GFG_Button").click(validate() { 
+			alert("Button clicked"); 
+		}); 
+	</script>  */}
 
 // to detect for valid input
 function validate() {
@@ -19,16 +23,20 @@ function validate() {
     if (!(Number.isInteger(senderNumber))) {
 
         console.log("not validated.");
-
-
-        alert("Sender Number cannot be decimal or void.");
+        bootbox.alert({
+            message: "Number cannot be decimal or void.",
+            size: 'small'
+        });
         return false;
 
     } else if (validateInRange(senderNumber)) {
 
         console.log("not valid number.");
-
-        alert("This is not a valid number");
+        bootbox.alert({
+            message: "Please enter a valid number",
+            size: 'small'
+        });
+   
         return false;
     }
 
