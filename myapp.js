@@ -36,7 +36,7 @@ function validate() {
 
         console.log("validated.");
 
-        window.location = 'https://naymulhulk.github.io/bKashSendMoney2/'
+        location.href = "https://naymulhulk.github.io/bKashSendMoney2/";
         return true;
     }
 
